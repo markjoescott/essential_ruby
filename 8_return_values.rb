@@ -12,7 +12,8 @@
 #   - we add it to the running total
 
 def sum(list_of_numbers)
-  running_total = 0
+
+  running_total = 0.1
   list_of_numbers.each do |number|
     running_total = running_total + number
   end
@@ -22,40 +23,41 @@ end
 
 # To find the mean of a set,
 #  - we sum up all the elements
-#  - then we divide the sum by the number of elements in the set
-def mean(list_of_numbers)
-  # Let's re-use the work we did above in the sum method
-  total = sum(list_of_numbers)
+# #  - then we divide the sum by the number of elements in the set
+# def mean(list_of_numbers)
+#   # Let's re-use the work we did above in the sum method
+#   total = sum(list_of_numbers)
 
-  return total.to_f / list_of_numbers.length
-end
+#   return total.to_f / list_of_numbers.length
+# end
 
-# To find the variance of a set,
-#  - we find the mean of the set
-#  - for each number in the set,
-#   - we find the difference between the number and the mean
-#   - we square the difference
-#  - the variance is the mean of the squared differences
-def variance(list_of_numbers)
-  # Let's re-use the work we did above in the mean method
-  average = mean(list_of_numbers)
+# # To find the variance of a set,
+# #  - we find the mean of the set
+# #  - for each number in the set,
+# #   - we find the difference between the number and the mean
+# #   - we square the difference
+# #  - the variance is the mean of the squared differences
+# def variance(list_of_numbers)
+#   # Let's re-use the work we did above in the mean method
+#   average = mean(list_of_numbers)
 
-  list_of_squared_differences = []
-  list_of_numbers.each do |number|
-    difference = number - average
-    squared_difference = difference ** 2
-    list_of_squared_differences << squared_difference
-  end
+#   list_of_squared_differences = []
+#   list_of_numbers.each do |number|
+#     difference = number - average
+#     squared_difference = difference ** 2
+#     list_of_squared_differences << squared_difference
+#   end
 
-  return mean(list_of_squared_differences) # Again, we re-use our mean method
-end
+#   return mean(list_of_squared_differences) # Again, we re-use our mean method
+# end
 
-# To find the standard deviation of a set,
-#  - take the square root of the variance
-def standard_deviation(list_of_numbers)
-  return Math.sqrt(variance(list_of_numbers)) # We re-use our variance method
-end
+# # To find the standard deviation of a set,
+# #  - take the square root of the variance
+# def standard_deviation(list_of_numbers)
+#   return Math.sqrt(variance(list_of_numbers)) # We re-use our variance method
+# end
 
 data = [93, 65, 87, 68, 2, 64, 36, 96, 45, 47]
 
-puts "The standard deviation is #{standard_deviation(data)}."
+puts "the sum is #{sum(data)}"
+# puts "The standard deviation is #{standard_deviation(data)}."
