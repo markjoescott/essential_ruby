@@ -24,8 +24,10 @@ return  answer
 end
 
   rate_data = 0.09
-  nper_data = 5
-  pv_data = 5000
+  number_of_payments = 5
+  principal_amount = 5000
 
- puts "The size of each payment is #{pmt(rate_data, nper_data, pv_data)}"
+ puts "The size of each payment is #{pmt(rate_data, number_of_payments, principal_amount)}"
+# Example usage of the method:
 
+# puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."

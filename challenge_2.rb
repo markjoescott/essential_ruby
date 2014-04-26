@@ -7,6 +7,7 @@ require './challenge_1.rb'
 # CHALLENGE 2
 # ===========
 
+
 # Below is an array of hashes. Each hash in the array represents one rate quote from a bank.
 
 loan_quotes = [
@@ -20,11 +21,19 @@ loan_quotes = [
 number_of_payments = 180
 principal_amount = 100000.0
 
+
 # Now, loop through the array of loan quotes using .each:
 #   For each option, tell the user how much the monthly payment will be to that bank.
 #   Re-use the pmt method that you defined in Challenge 1.
 
+loan_quotes.each do |loan|
 
-# ====================
-# Your code goes here.
-# ====================
+puts "The monthly payment for #{loan["bank"]} will be $#{pmt(loan["rate"],
+                                number_of_payments, principal_amount)}"
+
+
+end
+
+
+
+
