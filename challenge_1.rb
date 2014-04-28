@@ -23,9 +23,9 @@ return  answer
 
 end
 
-  rate_data = 0.09
-  number_of_payments = 5
-  principal_amount = 5000
+  rate_data = 0.065/12
+  number_of_payments = 360
+  principal_amount = 200000
 
  puts "The size of each payment is #{pmt(rate_data, number_of_payments, principal_amount)}"
 # Example usage of the method:
